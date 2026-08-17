@@ -83,15 +83,26 @@
 <!-- SCRIPT JAVASCRIPT -->
 <script>
     // Validasi Cek Tagihan
-    function prosesCek() {
-        var idPelanggan = document.getElementById('nomor_inet').value.trim();
-        if(idPelanggan === "") {
-            alert("Silakan isi Nomor INET Anda terlebih dahulu!");
-            document.getElementById('nomor_inet').focus();
-            return;
-        }
-        window.open("http://203.190.46.125:8080/isp/index.php", "_blank");
+function prosesCek() {
+    var inputInet = document.getElementById('nomor_inet');
+    
+    // Cek apakah elemen input ada di halaman
+    if (!inputInet) {
+        console.error("Elemen #nomor_inet tidak ditemukan!");
+        return;
     }
+
+    var idPelanggan = inputInet.value.trim();
+    
+    if (idPelanggan === "") {
+        alert("Silakan isi Nomor INET Anda terlebih dahulu!");
+        inputInet.focus();
+        return;
+    }
+
+    // Menggunakan window.location.href agar aman dari pemblokir pop-up
+    window.location.href = "http://203.190.46.125:8080/isp/index.php";
+}
 
     // Logic Infinite Slider
     const slider = document.getElementById('slider');
