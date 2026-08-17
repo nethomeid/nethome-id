@@ -5,59 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cek Tagihan Internet Nethome</title>
     <style>
-<!-- BAGIAN INPUT CEK TAGIHAN (TARUH DI ATAS SLIDER) -->
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .tombol-inet:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container"> <!-- CONTAINER UTAMA -->
+
+    <!-- BAGIAN INPUT CEK TAGIHAN -->
     <div style="background: rgb(0, 123, 255); border-radius: 12px; color: white; margin: 10px 0px; padding: 25px; box-shadow: 0 4px 15px rgba(0,123,255,0.2); text-align: center;">
         <h3 style="color: white; margin: 0px 0px 15px; font-size: 20px;">Cek Tagihan Dan Pembayaran Internet Anda</h3>
         
-        <!-- Kolom Input ID Pelanggan untuk Android -->
+        <!-- Kolom Input ID Pelanggan -->
         <input type="text" id="nomor_inet" placeholder="Masukkan Nomor INET Anda..." autocapitalize="characters" autocomplete="off" 
             style="width: 100%; padding: 12px; margin-bottom: 15px; border: 2px solid transparent; border-radius: 8px; font-size: 16px; box-sizing: border-box; outline: none; text-align: center; font-weight: bold; color: #333;">
         
         <!-- Tombol Aksi Menuju Sistem ISP -->
         <div onclick="prosesCek()" class="tombol-inet" style="border-radius: 8px; border: 2px solid white; display: inline-block; font-size: 18px; font-weight: bold; padding: 12px 20px; transition: all 0.2s ease; cursor: pointer;">
             CEK TAGIHAN SEKARANG
-            <img src="https://cdn-icons-png.flaticon.com/512/751/751463.png" style="height: 20px; margin-left: 8px; vertical-align: middle; width: 20px; filter: brightness(0) invert(1);" />
+            <img src="https://cdn-icons-png.flaticon.com/512/751/751463.png" style="height: 20px; margin-left: 8px; vertical-align: middle; width: 20px; filter: brightness(0) invert(1);" alt="Icon" />
         </div>
     </div> 
 
-    <!-- Script Validasi untuk Android (Bisa ditaruh di bawah kartu atau di paling bawah sebelum </body>) -->
-    <script>
-        function prosesCek() {
-            var idPelanggan = document.getElementById('nomor_inet').value.trim();
-            if(idPelanggan === "") {
-                alert("Silakan isi Nomor INET Anda terlebih dahulu!");
-                document.getElementById('nomor_inet').focus();
-                return;
-            }
-            window.open("http://9.154.229.212:8080/isp/login.php", "_blank");
-        }
-    </script>
-
-</div>
-<!-- ========================================== -->
-    <!-- AWAL KODE SLIDER GAMBAR INFINITE (KANAN KE KIRI) -->
-    <!-- ========================================== -->
-   <!-- ========================================== -->
-    <!-- AWAL KODE SLIDER GAMBAR INFINITE (DI DALAM CONTAINER) -->
-    <!-- ========================================== -->
+    <!-- SLIDER GAMBAR INFINITE -->
     <div class="slider-container" style="width: 100%; position: relative; margin-top: 20px; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
         <div class="slides" id="slider" style="display: flex; width: 100%; transition: transform 0.5s ease-in-out;">
-            <img src="ani2.jpg" alt="" style="width: 100%; flex-shrink: 0; display: block; height: auto; object-fit: contain;">
-            <img src="ani3.jpg" alt="" style="width: 100%; flex-shrink: 0; display: block; height: auto; object-fit: contain;">
-            <img src="ani4.jpg" alt="" style="width: 100%; flex-shrink: 0; display: block; height: auto; object-fit: contain;">
+            <img src="ani2.jpg" alt="Slide 1" style="width: 100%; flex-shrink: 0; display: block; height: auto; object-fit: contain;">
+            <img src="ani3.jpg" alt="Slide 2" style="width: 100%; flex-shrink: 0; display: block; height: auto; object-fit: contain;">
+            <img src="ani4.jpg" alt="Slide 3" style="width: 100%; flex-shrink: 0; display: block; height: auto; object-fit: contain;">
         </div>
     </div>
 
     <!-- LAYANAN NAVIGASI -->
-    <div style="max-width: 500px; margin: 25px auto; padding: 20px; border: 2px solid #FF6347; border-radius: 12px; background-color: #ffffff; font-family: Arial, sans-serif; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
+    <div style="margin: 25px auto; padding: 20px; border: 2px solid #FF6347; border-radius: 12px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
         <h3 style="text-align: center; margin-top: 0; color: #333; margin-bottom: 20px;">Layanan Navigasi</h3>
         <div style="display: flex; flex-direction: column; gap: 12px;">
-             <a href="http://9.154.229.212:8080/nethome_id/" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ddd; border-radius: 8px; transition: 0.3s;">Paket Internet</a>
-            <a href="https://gantisandiwifi.blogspot.com/2023/03/search-ip-adress.html" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ddd; border-radius: 8px; transition: 0.3s;">Ganti Sandi Wifi</a>
-            <a href="https://net1home.blogspot.com/2023/06/kontrak-berlangganan.html" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ddd; border-radius: 8px; transition: 0.3s;">Router Tp link</a>
-            <a href="https://mercusyskonfig.blogspot.com/2023/03/mercusys.html" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ddd; border-radius: 8px; transition: 0.3s;">Router Mercusys</a>
-            <a href="https://play.google.com/store/apps/details?id=gplx.router.admin.page&amp;referrer=utm_source%3Dshare_my_app" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #000; text-decoration: none; font-weight: bold; border: 1px solid #00cccc; border-radius: 8px; transition: 0.3s;">Download Aplikasi Ganti Sandi Wifi</a>
-            <a href="https://neartail.com/sm/JmwpE2Ke0" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ddd; border-radius: 8px; transition: 0.3s;">Laporan Gangguan</a>
+            <a href="http://9.154.229.212:8080/nethome_id/" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ddd; border-radius: 8px;">Paket Internet</a>
+            <a href="https://gantisandiwifi.blogspot.com/2023/03/search-ip-adress.html" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ddd; border-radius: 8px;">Ganti Sandi Wifi</a>
+            <a href="https://net1home.blogspot.com/2023/06/kontrak-berlangganan.html" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ddd; border-radius: 8px;">Router Tp link</a>
+            <a href="https://mercusyskonfig.blogspot.com/2023/03/mercusys.html" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ddd; border-radius: 8px;">Router Mercusys</a>
+            <a href="https://play.google.com/store/apps/details?id=gplx.router.admin.page&referrer=utm_source%3Dshare_my_app" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #000; text-decoration: none; font-weight: bold; border: 1px solid #00cccc; border-radius: 8px;">Download Aplikasi Ganti Sandi Wifi</a>
+            <a href="https://neartail.com/sm/JmwpE2Ke0" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ddd; border-radius: 8px;">Laporan Gangguan</a>
         </div>
     </div>
      
@@ -71,8 +71,8 @@
             <a href="https://www.instagram.com/nnethome/profilecard/?igsh=MTVnbW9naHRsNmwyZw==" target="_blank" title="Instagram">
                 <img alt="Instagram" height="35" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" style="border: 0px;" width="35" />
             </a>
-            <a href="https://www.tiktok.com/@nethome.network?_t=ZS-8xHTeqt90ey&amp;_r=1" target="_blank" title="Tiktok">
-                <img alt="Tiktok" height="35" src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" style="border: 0px;" width="50" />
+            <a href="https://www.tiktok.com/@nethome.network?_t=ZS-8xHTeqt90ey&_r=1" target="_blank" title="Tiktok">
+                <img alt="Tiktok" height="35" src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" style="border: 0px;" width="35" />
             </a>
         </div>
         <div style="color: #666666; font-size: 14px; margin-top: 15px;">
@@ -80,22 +80,37 @@
         </div>
     </div>
 
-</div> <!-- PENUTUP KOTAK CONTAINER UTAMA -->
+</div> <!-- PENUTUP CONTAINER UTAMA -->
 
-<!-- SCRIPT JAVASCRIPT SLIDER (DITARUH DI LUAR CONTAINER AGAR SEMPURNA) -->
+<!-- SCRIPT JAVASCRIPT -->
 <script>
-    const slider = document.getElementById('slider');
-    let autoSlideInterval;
+    // Validasi Cek Tagihan
+    function prosesCek() {
+        var idPelanggan = document.getElementById('nomor_inet').value.trim();
+        if(idPelanggan === "") {
+            alert("Silakan isi Nomor INET Anda terlebih dahulu!");
+            document.getElementById('nomor_inet').focus();
+            return;
+        }
+        window.open("http://9.154.229.212:8080/isp/login.php", "_blank");
+    }
 
-    const firstClone = slider.children[0].cloneNode(true);
-    const lastClone = slider.children[slider.children.length - 1].cloneNode(true);
-    
+    // Logic Infinite Slider
+    const slider = document.getElementById('slider');
+    const slides = Array.from(slider.children);
+
+    // Kloning elemen pertama dan terakhir
+    const firstClone = slides[0].cloneNode(true);
+    const lastClone = slides[slides.length - 1].cloneNode(true);
+
     slider.appendChild(firstClone);
     slider.insertBefore(lastClone, slider.children[0]);
 
     const totalImages = slider.children.length;
     let counter = 1;
-    
+    let autoSlideInterval;
+
+    // Set posisi awal ke gambar pertama asli
     slider.style.transform = `translateX(${-counter * 100}%)`;
 
     function nextSlide() {
@@ -106,12 +121,14 @@
     }
 
     slider.addEventListener('transitionend', () => {
-        if (slider.children[counter].src === firstClone.src && counter !== 1) {
+        // Jika sampai di clone gambar pertama, lompat ke gambar pertama asli
+        if (counter === totalImages - 1) {
             slider.style.transition = "none";
             counter = 1;
             slider.style.transform = `translateX(${-counter * 100}%)`;
         }
-        if (slider.children[counter].src === lastClone.src) {
+        // Jika sampai di clone gambar terakhir, lompat ke gambar terakhir asli
+        if (counter === 0) {
             slider.style.transition = "none";
             counter = totalImages - 2;
             slider.style.transform = `translateX(${-counter * 100}%)`;
