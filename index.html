@@ -24,14 +24,22 @@
 
 <div class="container"> <!-- CONTAINER UTAMA -->
 
-    
+    <!-- BAGIAN INPUT CEK TAGIHAN -->
+    <div style="background: rgb(0, 123, 255); border-radius: 12px; color: white; margin: 10px 0px; padding: 25px; box-shadow: 0 4px 15px rgba(0,123,255,0.2); text-align: center;">
+        <h3 style="color: white; margin: 0px 0px 15px; font-size: 20px;">Cek Tagihan Dan Pembayaran Internet Anda</h3>
+        
+        <!-- Kolom Input ID Pelanggan -->
+        <input type="text" id="nomor_inet" placeholder="Masukkan Nomor INET Anda..." autocapitalize="characters" autocomplete="off" 
+            style="width: 100%; padding: 12px; margin-bottom: 15px; border: 2px solid transparent; border-radius: 8px; font-size: 16px; box-sizing: border-box; outline: none; text-align: center; font-weight: bold; color: #333;">
         
         <!-- Tombol Aksi Menuju Sistem ISP -->
         <div onclick="prosesCek()" class="tombol-inet" style="border-radius: 8px; border: 2px solid white; display: inline-block; font-size: 18px; font-weight: bold; padding: 12px 20px; transition: all 0.2s ease; cursor: pointer;">
-            Data Pelanggan
+            CEK TAGIHAN SEKARANG
             <img src="https://cdn-icons-png.flaticon.com/512/751/751463.png" style="height: 20px; margin-left: 8px; vertical-align: middle; width: 20px; filter: brightness(0) invert(1);" alt="Icon" />
         </div>
-    </div> 
+    </div>
+
+</div> <!-- PENUTUP CONTAINER UTAMA -->
 
     <!-- SLIDER GAMBAR INFINITE -->
     <div class="slider-container" style="width: 100%; position: relative; margin-top: 20px; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
@@ -46,7 +54,7 @@
     <div style="margin: 25px auto; padding: 20px; border: 2px solid #FF6347; border-radius: 12px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
         <h3 style="text-align: center; margin-top: 0; color: #333; margin-bottom: 20px;">Layanan Navigasi</h3>
         <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="http://203.190.46.125:8080/nethome_id/" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ddd; border-radius: 8px;">Paket Internet</a>
+            <a href="http://9.154.229.212:8080/nethome_id/" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ddd; border-radius: 8px;">Paket Internet</a>
             <a href="https://gantisandiwifi.blogspot.com/2023/03/search-ip-adress.html" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ddd; border-radius: 8px;">Ganti Sandi Wifi</a>
             <a href="https://net1home.blogspot.com/2023/06/kontrak-berlangganan.html" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ddd; border-radius: 8px;">Router Tp link</a>
             <a href="https://mercusyskonfig.blogspot.com/2023/03/mercusys.html" target="_blank" style="display: block; padding: 12px; text-align: center; background-color: #01ffff; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ddd; border-radius: 8px;">Router Mercusys</a>
@@ -86,7 +94,7 @@
             document.getElementById('nomor_inet').focus();
             return;
         }
-        window.open("http://203.190.46.125:8080/isp/index.php", "_blank");
+        window.open("http://9.154.229.212:8080/isp/login.php", "_blank");
     }
 
     // Logic Infinite Slider
